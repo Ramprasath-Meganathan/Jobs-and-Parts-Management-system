@@ -1,0 +1,9 @@
+{
+  "name": "Company Z",
+  "short_name": "Company Z",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Company Z",
+  "icons": []
+}

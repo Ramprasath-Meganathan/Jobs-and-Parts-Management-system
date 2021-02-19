@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "203c2ad3-473e-4458-bd64-7a51d1230627",
+		"name": "assignment6-companyZ",
+		"description": "The collection of Company Z backend endpoints. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://compzbackend-bzedu2xpga-uc.a.run.app/",
+					"protocol": "https",
+					"host": [
+						"compzbackend-bzedu2xpga-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "The homepage of backend server of company Z"
+			},
+			"response": []
+		},
+		{
+			"name": "Search History Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/jobs/1111",
+					"protocol": "https",
+					"host": [
+						"compzbackend-bzedu2xpga-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"jobs",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"compz@email.com\",\r\n    \"password\":\"compz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/users",
+					"protocol": "https",
+					"host": [
+						"compzbackend-bzedu2xpga-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "The endpoint URL which authenticates the user in Login page after checking the credentials in database."
+			},
+			"response": []
+		},
+		{
+			"name": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/updateOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"partId\":2,\r\n    \"jobName\": \"job4\",\r\n    \"userId\": \"compz@email.com\",\r\n    \"qty\":7,\r\n    \"result\":\"ordered\" \r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/updateOrder",
+					"protocol": "https",
+					"host": [
+						"compzbackend-bzedu2xpga-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"updateOrder"
+					]
+				},
+				"description": "The update order endpoint updates the order details in the company Z job parts table."
+			},
+			"response": []
+		},
+		{
+			"name": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/getOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"jobName\": \"job8\",\r\n    \"userId\": \"compz@email.com\",\r\n    \"partId\" : 4\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://compzbackend-bzedu2xpga-uc.a.run.app/api/getOrder",
+					"protocol": "https",
+					"host": [
+						"compzbackend-bzedu2xpga-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"getOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

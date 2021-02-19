@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "42c6d04f-b240-408b-a018-c8fa2114c3f0",
+		"name": "companyX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"jobName\": \"job177\",\r\n   \"partId\": 4,\r\n   \"qty\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete job",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/?jobName=job177&partId=4",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						""
+					],
+					"query": [
+						{
+							"key": "jobName",
+							"value": "job177"
+						},
+						{
+							"key": "partId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update job",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"jobName\": \"job3\",\n   \"partId\": 1,\n   \"qty\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/order",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"jobName\": \"job9\",\n   \"partId\": 2,\n   \"userId\": \"userTwo\",\n   \"qty\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/order",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get job by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX/?jobName=job3",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX",
+						""
+					],
+					"query": [
+						{
+							"key": "jobName",
+							"value": "job3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get job by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qvysii6xyi.execute-api.us-east-1.amazonaws.com/companyX?jobName=job2&partId=4",
+					"protocol": "https",
+					"host": [
+						"qvysii6xyi",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"companyX"
+					],
+					"query": [
+						{
+							"key": "jobName",
+							"value": "job2"
+						},
+						{
+							"key": "partId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "25c29595-9510-4fb6-97ed-986ebcd9c74f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "14b7a27e-f938-4b5c-9e32-40c64bbff6ad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

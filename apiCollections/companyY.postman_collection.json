@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "546dff54-7cab-4de6-94cf-e3170225fc51",
+		"name": "companyY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all parts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/parts",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"parts"
+					]
+				},
+				"description": "Return all the parts from the parts DB"
+			},
+			"response": []
+		},
+		{
+			"name": "get part by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/parts/1",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"parts",
+						"1"
+					]
+				},
+				"description": "Return specific part with id from the parts DB"
+			},
+			"response": []
+		},
+		{
+			"name": "create part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"partId\": \"11\",\n    \"partName\": \"partz\",\n    \"qoh\": \"50\",\n    \"message\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/parts/create",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"parts",
+						"create"
+					]
+				},
+				"description": "Create new part and then store the data into parts DB\nIt will check if the part is exist or not\nParameter need to specify when create new part: partId, partName, qoh"
+			},
+			"response": []
+		},
+		{
+			"name": "update part",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"partId\": \"8\",\n    \"partName\": \"partm\",\n    \"qoh\": \"200\",\n    \"message\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/parts/update",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"parts",
+						"update"
+					]
+				},
+				"description": "Update part and then store the data into parts DB\nIt will check if the part is exist or not\nParameter need to specify when update part: partId, partName, qoh"
+			},
+			"response": []
+		},
+		{
+			"name": "get orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/order",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"order"
+					]
+				},
+				"description": "Return all the partsOrder from the partorderY DB\nDisplayed in a sorted order, first by jobName, then by userId, and then by partId"
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"jobName\": \"job8\",\n   \"partId\": 6,\n   \"userId\": \"user\",\n   \"qty\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-cloudprojects-279901.cloudfunctions.net/companyy/order/",
+					"protocol": "https",
+					"host": [
+						"us-central1-cloudprojects-279901",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"companyy",
+						"order",
+						""
+					]
+				},
+				"description": "Create new partsOrder and then store the data into partorderY DB\nParameter need to specify when create new part: jobName, partId, userId, qty"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

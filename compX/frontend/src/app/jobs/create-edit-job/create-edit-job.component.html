@@ -1,0 +1,33 @@
+<form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Job name</label>
+        <input id="name"
+               [attr.readonly]="isEdit ? 'readonly' : null"
+               type="text"
+               formControlName="jobName"
+               name="name"
+               class="form-control" />
+    </div>
+    <section>
+        <div class="d-flex justify-content-sm-between">
+            <h5>Parts</h5>
+            <button [class.d-none]="isEdit"
+                    (click)="addPart()"
+                        type="button"
+                        class="btn btn-success">Add Part</button>
+        </div>
+        <app-create-edit-part *ngFor="let part of parts?.controls; let i = index"
+                              [isEdit]="isEdit"
+                              [index]="i"
+                              [partForm]="part"
+                              (deletePart)="deletePart($event)">
+
+        </app-create-edit-part>
+    </section>
+    <hr />
+    <input
+            type="submit"
+            [value]="isEdit ? 'Update job' : 'Create Job'"
+            class="btn btn-primary btn-block"
+    />
+</form>

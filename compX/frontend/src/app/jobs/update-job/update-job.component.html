@@ -1,0 +1,7 @@
+<div class="w-50 mx-auto">
+    <h2>Edit {{ jobName }}</h2>
+    <div class="mt-5">
+        <app-create-edit-job (onDidUpdateJob)="onUpdatedJob()" [initialForm]="jobShort" [isEdit]="true"></app-create-edit-job>
+    </div>
+</div>
+

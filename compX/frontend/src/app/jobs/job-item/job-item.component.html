@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-sm-between">
+    <h2>Jobs</h2>
+    <button (click)="onShowOrders()"
+            type="button"
+            class="btn btn-lg btn-outline-info">View Orders</button>
+</div>
+<div class="row mt-5">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Job name</th>
+                <th>Part ID</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let job of jobs">
+                    <td>{{ job.jobName }}</td>
+                    <td>{{ job.partId }}</td>
+                    <td>{{ job.qty }}</td>
+                    <td>
+                        <div class="btn btn-danger"
+                           (click)="onDeleteJob(job.jobName, job.partId)" >Delete</div>
+                    </td>
+                    <td>
+                        <a class="btn btn-info"
+                           [routerLink]="['edit', job.jobName]">Edit</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col">
+        <app-create-edit-job></app-create-edit-job>
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+<h2>Orders</h2>
+<table class="table table-striped mt-5">
+    <thead>
+    <tr>
+        <th>Job name</th>
+        <th>Part ID</th>
+        <th>User ID</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+        <td>{{ order.jobName }}</td>
+        <td>{{ order.partId }}</td>
+        <td>{{ order.userId }}</td>
+        <td>{{ order.qty }}</td>
+    </tr>
+    </tbody>
+</table>

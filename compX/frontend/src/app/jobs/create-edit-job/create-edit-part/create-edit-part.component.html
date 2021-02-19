@@ -1,0 +1,32 @@
+<form class="form-row align-items-end" [formGroup]="partForm">
+    <div class="form-group col-md-8">
+        <label for="partName">Part Name</label>
+        <select id="partName"
+                class="form-control"
+                formControlName="partName"
+                [attr.disabled]="isEdit ? 'disabled' : null">
+            <option [class.d-none]="isEdit" selected>Choose...</option>
+            <option [attr.selected]="isEdit && part.partName === selectedValue ? 'selected' : null" *ngFor="let part of parts">
+                {{ part.partName }}
+            </option>
+        </select>
+    </div>
+    <div [ngClass]="isEdit ? 'col-md-4' : 'col-md-3'"
+            class="form-group">
+        <label for="qty">Quantity</label>
+        <input id="qty"
+               type="number"
+               formControlName="qoh"
+               name="qty"
+               class="form-control" />
+
+    </div>
+    <div [class.d-none] = "isEdit"
+         class="form-group col-md-1">
+        <button (click)="onDelete()"
+                type="button"
+                class="btn btn-danger align-bottom">-</button>
+    </div>
+</form>
+
+

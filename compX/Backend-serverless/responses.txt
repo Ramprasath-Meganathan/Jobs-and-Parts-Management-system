@@ -1,0 +1,6 @@
+1=inserted jobs into table success
+2=job already present in table insert failed
+3=job update success
+4=job update failed no job found
+5=job not found delete failed
+6=job deleted
